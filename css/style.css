@@ -501,7 +501,8 @@ footer .footer-logo img {
 }
 footer .footer-logo img:nth-child(2) {
   width: 90px;
-  height: 61px;
+  height: 100%;
+  margin-left: 8px;
 }
 footer .footer-info {
   letter-spacing: 0.075em;
@@ -914,17 +915,19 @@ section.spec div.items + .items {
     position: relative;
   }
 }
-section.spec div.items:nth-child(odd)::before {
-  position: absolute;
-  content: "";
-  background-image: url("../img/performace_spec_bg.webp");
-  background-size: cover;
-  width: 1170px;
-  height: 438px;
-  left: 0;
-  bottom: 36%;
-  transform: translateY(50%);
-  z-index: -1;
+@media (min-width: 768px) {
+  section.spec div.items:nth-child(odd)::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/performace_spec_bg.webp");
+    background-size: cover;
+    width: 1170px;
+    height: 438px;
+    left: 0;
+    bottom: 36%;
+    transform: translateY(50%);
+    z-index: -1;
+  }
 }
 @media (min-width: 768px) {
   section.spec div.items:nth-child(odd) div.container div.blocks div.text div.heading {

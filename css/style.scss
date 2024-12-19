@@ -537,7 +537,8 @@ footer {
       object-position: right;
       &:nth-child(2) {
         width: 90px;
-        height: 61px;
+        height: 100%;
+        margin-left: 8px;
       }
     }
   }
@@ -978,16 +979,18 @@ section.spec {
         position: relative
       }
       &::before {
-        position: absolute;
-        content: '';
-        background-image: url('../img/performace_spec_bg.webp');
-        background-size: cover;
-        width: 1170px;
-        height: 438px;
-        left: 0;
-        bottom: 36%;
-        transform: translateY(50%);
-        z-index: -1;
+        @media (min-width: 768px) {
+          position: absolute;
+          content: '';
+          background-image: url('../img/performace_spec_bg.webp');
+          background-size: cover;
+          width: 1170px;
+          height: 438px;
+          left: 0;
+          bottom: 36%;
+          transform: translateY(50%);
+          z-index: -1;
+        }
       }
       div.container {
         div.blocks {
